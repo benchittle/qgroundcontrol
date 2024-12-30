@@ -25,27 +25,29 @@ BatteryIndicator {
     expandedPageComponent: Component {
         SettingsGroupLayout {
             Layout.fillWidth:   true
-            heading:            qsTr("Low Battery")
+            heading:            qsTr("Low Battery Behavior")
 
             FactPanelController { id: controller }
 
-            LabelledFactSlider {
+            FactSlider {
                 Layout.fillWidth:       true
-                Layout.preferredWidth:  ScreenTools.defaultFontPixelWidth * 20
                 label:                  qsTr("Warning Level")
                 fact:                   controller.getParameterFact(-1, "BAT_LOW_THR")
+                majorTickStepSize:      5
             }   
 
-            LabelledFactSlider {
+            FactSlider {
                 Layout.fillWidth:   true
-                label:              qsTr("Failsafe Level")
+                label:              qsTr("Critical Level")
                 fact:               controller.getParameterFact(-1, "BAT_CRIT_THR")
+                majorTickStepSize:  5
             }
 
-            LabelledFactSlider {
+            FactSlider {
                 Layout.fillWidth:   true
                 label:              qsTr("Emergency Level")
                 fact:               controller.getParameterFact(-1, "BAT_EMERGEN_THR")
+                majorTickStepSize:  5
             }
 
             LabelledFactComboBox {
