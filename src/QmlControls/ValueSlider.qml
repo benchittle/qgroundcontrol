@@ -30,6 +30,8 @@ Control {
     required property int   decimalPlaces
     required property real  majorTickStepSize
 
+    property int _tickValueDecimalPlaces: countDecimalPlaces(majorTickStepSize)
+
     property real   _indicatorCenterPos:    sliderFlickable.width / 2
 
     property real   _majorTickSpacing:      ScreenTools.defaultFontPixelWidth * 6
@@ -69,13 +71,21 @@ Control {
     on_SliderValueChanged: value = _sliderValue
 
     Component.onCompleted: {
-        setCurrentValue(value, false)
+        _setCurrentValue(value, false)
     }
 
-    function setCurrentValue(currentValue, animate = true) {
+    function countDecimalPlaces(number) {
+        const numberString = number.toString()
+        if (numberString.includes('.')) {
+            return numberString.split('.')[1].length
+        } else {
+            return 0
+        }
+    }
+
+    function _setCurrentValue(currentValue, animate = true) {
         // Position the slider such that the indicator is pointing to the current value
         var contentX = _indicatorCenterPos - ((currentValue - _firstPixelValue) / _sliderValuePerPixel)
-        console.log("setCurrentValue: ", currentValue, contentX, _firstPixelValue, _sliderValuePerPixel, _indicatorCenterPos)   
         if (animate) {
             flickableAnimation.from = sliderFlickable.contentX
             flickableAnimation.to = contentX
@@ -112,7 +122,6 @@ Control {
             anchors.fill:       parent
             contentWidth:       sliderContainer.width
             contentHeight:      sliderContainer.height
-            flickDeceleration:  0.5
             flickableDirection: Flickable.HorizontalFlick
 
             PropertyAnimation on contentX {
@@ -131,8 +140,6 @@ Control {
                 id:     sliderContainer
                 width:  _sliderContentSize
                 height: sliderFlickable.height
-
-                Component.onCompleted: console.log("sliderContainer: ", width, sliderFlickable.width, sliderFlickable.contentWidth)
 
                 // Major tick marks
                 Repeater {
@@ -157,7 +164,7 @@ Control {
                             anchors.bottomMargin:       _tickValueEdgeMargin
                             anchors.bottom:             parent.bottom
                             anchors.horizontalCenter:   majorTickMark.horizontalCenter
-                            text:                       parent.tickValue
+                            text:                       parent.tickValue.toFixed(_tickValueDecimalPlaces)
                         }
                     }
                 }
@@ -181,17 +188,18 @@ Control {
         }
 
         Rectangle {
+            id:         labelItemBackground
             width:      labelItem.contentWidth
             height:     labelItem.contentHeight
             color:      qgcPal.window
             opacity:    0.8
+        }
 
-            QGCLabel {
-                id:                 labelItem
-                anchors.left:       parent.left
-                anchors.top:        parent.top
-                text:               label
-            }
+        QGCLabel {
+            id:                 labelItem
+            anchors.left:       labelItemBackground.left
+            anchors.top:        labelItemBackground.top
+            text:               label
         }
     }
 
@@ -234,6 +242,35 @@ Control {
                 horizontalAlignment:        Text.AlignHCenter
                 verticalAlignment:          Text.AlignBottom
                 text:                       _clampedSliderValue(_sliderValue) + (unitsString !== "" ? " " + unitsString : "")
+            }
+
+            QGCMouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    sliderValueTextField.text = _clampedSliderValue(_sliderValue)
+                    sliderValueTextField.visible = true
+                    sliderValueTextField.forceActiveFocus()
+                }
+            }
+
+            QGCTextField {
+                id:                 sliderValueTextField
+                anchors.topMargin:  valueIndicator.pointerSize
+                anchors.fill:       parent
+                showUnits:          true
+                unitsLabel:         unitsString
+                visible:            false
+
+                onEditingFinished: {
+                    visible = false
+                    focus = false
+                    _setCurrentValue(_clampedSliderValue(parseFloat(text)))
+                }
+
+                Connections {
+                    target: control
+                    on_SliderValueChanged: sliderValueTextField.visible = false
+                }
             }
         }
     }
