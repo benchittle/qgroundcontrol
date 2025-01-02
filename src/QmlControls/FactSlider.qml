@@ -26,13 +26,11 @@ ValueSlider {
 
     required property Fact fact
 
-    property bool _loadComplete:            false
     property real _minMaxVisibilityPadding: ScreenTools.defaultFontPixelWidth
     property Fact _nullFact:                Fact { }
     property Fact _fact:                    fact ? fact : _nullFact
     
     Component.onCompleted: {
-        _loadComplete = true
         if (fact && fact.minIsDefaultForType && fact.min == from) {
             console.error("FactSlider: Fact is minIsDefaultForType", _fact.name)
         }
@@ -50,7 +48,7 @@ ValueSlider {
     }
 
     onValueChanged: {
-        if (_loadComplete && enabled) {
+        if (enabled) {
             // We don't want to spam the vehicle with parameter updates
             updateTimer.restart()
         }

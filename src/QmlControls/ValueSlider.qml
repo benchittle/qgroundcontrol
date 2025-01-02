@@ -32,7 +32,7 @@ Control {
 
     property int _tickValueDecimalPlaces: countDecimalPlaces(majorTickStepSize)
 
-    property real   _indicatorCenterPos:    sliderFlickable.width / 2
+    property real   _indicatorCenterPos:    width / 2
 
     property real   _majorTickSpacing:      ScreenTools.defaultFontPixelWidth * 6
 
@@ -43,35 +43,42 @@ Control {
 
     property int    _minorTickValueStep:    majorTickStepSize / 2
 
-    property real   _sliderValue:           _firstPixelValue + ((sliderFlickable.contentX + _indicatorCenterPos) * _sliderValuePerPixel)
+    //property real   _sliderValue:           _firstPixelValue + ((sliderFlickable.contentX + _indicatorCenterPos) * _sliderValuePerPixel)
 
     // Calculate the full range of the slider. We have been given a min/max but that is for clamping the selected slider values.
     // We need expand that range to take into account additional values that must be displayed above/below the value indicator
     // when it is at min/max.
 
     // Add additional major ticks above/below min/max to ensure we can display the full visual range of the slider
-    property int    _majorTicksVisibleBeyondIndicator:   Math.floor(_indicatorCenterPos / _majorTickSpacing)
-    property int    _majorTickAdjustment:               _majorTicksVisibleBeyondIndicator * majorTickStepSize
+    property int    _majorTicksVisibleBeyondIndicator:  Math.ceil(_indicatorCenterPos / _majorTickSpacing)
+    property int    _majorTicksExtentsAdjustment:       _majorTicksVisibleBeyondIndicator * majorTickStepSize
 
-    // Calculate the next major tick above/below min/max
-    property int    _majorTickMinValue: Math.ceil((from - _majorTickAdjustment) / majorTickStepSize) * majorTickStepSize
-    property int    _majorTickMaxValue: Math.floor((to + _majorTickAdjustment) / majorTickStepSize) * majorTickStepSize
+    // Calculate the min/max for the full slider range
+    property int    _majorTickMinValue: Math.floor((from - _majorTicksExtentsAdjustment) / majorTickStepSize) * majorTickStepSize
+    property int    _majorTickMaxValue: Math.floor((to + _majorTicksExtentsAdjustment) / majorTickStepSize) * majorTickStepSize
 
     // Now calculate the position we draw the first tick mark such that we are not allowed to flick above the max value
     property real   _firstTickPixelOffset:  _indicatorCenterPos - ((from - _majorTickMinValue) / _sliderValuePerPixel)
     property real   _firstPixelValue:       _majorTickMinValue - (_firstTickPixelOffset * _sliderValuePerPixel)
 
+    property int     _cMajorTicks: (_majorTickMaxValue - _majorTickMinValue) / majorTickStepSize + 1
+
     // Calculate the slider width such that we can flick through the full range of the slider
     property real   _sliderContentSize: ((to - _firstPixelValue) / _sliderValuePerPixel) + (sliderFlickable.width - _indicatorCenterPos)
 
-    property int     _cMajorTicks: (_majorTickMaxValue - _majorTickMinValue) / majorTickStepSize + 1
+    property bool    _loadComplete: false
 
     property var qgcPal: QGroundControl.globalPalette
 
-    on_SliderValueChanged: value = _sliderValue
-
     Component.onCompleted: {
-        _setCurrentValue(value, false)
+        _recalcSliderPos(false)
+        _loadComplete = true
+    }
+
+    onWidthChanged: {
+        if (_loadComplete) {
+            _recalcSliderPos()
+        }
     }
 
     function countDecimalPlaces(number) {
@@ -83,9 +90,9 @@ Control {
         }
     }
 
-    function _setCurrentValue(currentValue, animate = true) {
+    function _recalcSliderPos(animate = true) {
         // Position the slider such that the indicator is pointing to the current value
-        var contentX = _indicatorCenterPos - ((currentValue - _firstPixelValue) / _sliderValuePerPixel)
+        var contentX = ((value - _firstPixelValue) / _sliderValuePerPixel) - _indicatorCenterPos
         if (animate) {
             flickableAnimation.from = sliderFlickable.contentX
             flickableAnimation.to = contentX
@@ -97,10 +104,6 @@ Control {
 
     function _clampedSliderValue(value) {
         return Math.min(Math.max(value, from), to).toFixed(decimalPlaces)
-    }
-
-    function getOutputValue() {
-        return _clampedSliderValue(_sliderValue)
     }
 
     QGCPalette {
@@ -123,6 +126,12 @@ Control {
             contentWidth:       sliderContainer.width
             contentHeight:      sliderContainer.height
             flickableDirection: Flickable.HorizontalFlick
+
+            onContentXChanged: {
+                if (dragging) {
+                    value = _firstPixelValue + ((sliderFlickable.contentX + _indicatorCenterPos) * _sliderValuePerPixel)
+                }
+            }
 
             PropertyAnimation on contentX {
                 id:             flickableAnimation
@@ -241,13 +250,13 @@ Control {
                 anchors.horizontalCenter:   parent.horizontalCenter
                 horizontalAlignment:        Text.AlignHCenter
                 verticalAlignment:          Text.AlignBottom
-                text:                       _clampedSliderValue(_sliderValue) + (unitsString !== "" ? " " + unitsString : "")
+                text:                       _clampedSliderValue(value) + (unitsString !== "" ? " " + unitsString : "")
             }
 
             QGCMouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    sliderValueTextField.text = _clampedSliderValue(_sliderValue)
+                    sliderValueTextField.text = _clampedSliderValue(value)
                     sliderValueTextField.visible = true
                     sliderValueTextField.forceActiveFocus()
                 }
@@ -264,12 +273,13 @@ Control {
                 onEditingFinished: {
                     visible = false
                     focus = false
-                    _setCurrentValue(_clampedSliderValue(parseFloat(text)))
+                    value = _clampedSliderValue(parseFloat(text))
+                    _recalcSliderPos()
                 }
 
                 Connections {
                     target: control
-                    on_SliderValueChanged: sliderValueTextField.visible = false
+                    onValueChanged: sliderValueTextField.visible = false
                 }
             }
         }
