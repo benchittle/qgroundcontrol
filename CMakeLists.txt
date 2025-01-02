@@ -19,6 +19,8 @@ if(IS_DIRECTORY ${CMAKE_SOURCE_DIR}/custom)
     include(CustomOverrides)
 endif()
 
+set(QGC_ENABLE_GST_VIDEOSTREAMING OFF)
+
 #######################################################
 #                   Project Info
 #######################################################
