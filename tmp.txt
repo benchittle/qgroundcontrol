@@ -1,0 +1,728 @@
+custom-example/res/Custom/Widgets/CustomToolBarButton.qml:25:        color:                      qgcPal.buttonHighlight
+custom-example/res/Custom/Widgets/CustomToolBarButton.qml:44:            color:                  qgcPal.buttonText
+custom-example/res/Custom/Widgets/CustomToolBarButton.qml:52:            color:                  qgcPal.buttonText
+custom-example/res/Custom/Widgets/CustomQuickButton.qml:33:        color:                  (mouseArea.pressed || control.checked) ? qgcPal.buttonHighlight : (qgcPal.globalTheme === QGCPalette.Light ? Qt.rgba(1,1,1,0.5) : Qt.rgba(0,0,0,0.5))
+custom-example/res/Custom/Widgets/CustomQuickButton.qml:40:            color:              (mouseArea.pressed || control.checked) ? qgcPal.buttonHighlightText : qgcPal.buttonText
+custom-example/res/Custom/Widgets/CustomIconButton.qml:40:                    color:          qgcPal.text
+custom-example/res/Custom/Widgets/CustomIconButton.qml:53:            source:                 qgcPal.globalTheme === QGCPalette.Light ? "/res/QGCLogoBlack" : "/res/QGCLogoWhite"
+custom-example/res/Custom/Widgets/CustomSignalStrength.qml:27:    QGCPalette { id: qgcPal }
+custom-example/res/Custom/Widgets/CustomSignalStrength.qml:46:        color:              qgcPal.text
+custom-example/res/Custom/Widgets/CustomOnOffSwitch.qml:22:    color:  qgcPal.button
+custom-example/res/Custom/Widgets/CustomOnOffSwitch.qml:23:    border.color: qgcPal.windowShade
+custom-example/res/Custom/Widgets/CustomOnOffSwitch.qml:30:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+custom-example/res/Custom/Widgets/CustomOnOffSwitch.qml:35:        color:      checked ? qgcPal.button : qgcPal.buttonHighlight
+custom-example/res/Custom/Widgets/CustomOnOffSwitch.qml:36:        border.color: qgcPal.text
+custom-example/res/Custom/Widgets/CustomOnOffSwitch.qml:43:            color:      qgcPal.text
+custom-example/res/Custom/Widgets/CustomOnOffSwitch.qml:49:        color:      checked ? qgcPal.buttonHighlight : qgcPal.button
+custom-example/res/Custom/Widgets/CustomOnOffSwitch.qml:50:        border.color: qgcPal.text
+custom-example/res/Custom/Widgets/CustomOnOffSwitch.qml:56:            color:      qgcPal.buttonHighlightText
+custom-example/res/Custom/Widgets/CustomVehicleButton.qml:29:                return qgcPal.colorGreen
+custom-example/res/Custom/Widgets/CustomVehicleButton.qml:32:                return qgcPal.colorOrange
+custom-example/res/Custom/Widgets/CustomVehicleButton.qml:35:                return qgcPal.colorRed
+custom-example/res/Custom/Widgets/CustomVehicleButton.qml:38:        return qgcPal.colorGrey
+custom-example/res/Custom/Widgets/CustomVehicleButton.qml:50:        color:                      button.checked ? qgcPal.buttonHighlight : qgcPal.button
+custom-example/res/Custom/Widgets/CustomVehicleButton.qml:64://            color:                  button.checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+custom-example/res/Custom/Widgets/CustomVehicleButton.qml:74:                color:              button.checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+custom-example/res/Custom/Widgets/CustomVehicleButton.qml:80:                    color:          button.checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+custom-example/res/CustomFlyViewOverlay.qml:34:    property var    _sepColor:              qgcPal.globalTheme === QGCPalette.Light ? Qt.rgba(0,0,0,0.5) : Qt.rgba(1,1,1,0.5)
+custom-example/res/CustomFlyViewOverlay.qml:35:    property color  _indicatorsColor:       qgcPal.text
+custom-example/res/CustomFlyViewOverlay.qml:139:        color:                      qgcPal.windowShadeDark
+custom-example/res/CustomFlyViewOverlay.qml:145:            color:                  qgcPal.text
+custom-example/res/CustomFlyViewOverlay.qml:170:        color:                  qgcPal.window
+custom-example/res/CustomFlyViewOverlay.qml:180:            border.color:           qgcPal.text
+custom-example/res/CustomFlyViewOverlay.qml:193:            color:                      qgcPal.windowShade
+custom-example/res/CustomFlyViewOverlay.qml:199:                color:              qgcPal.text
+custom-example/res/CustomFlyViewOverlay.qml:228:            color:                      qgcPal.windowShade
+custom-example/res/CustomFlyViewOverlay.qml:234:                color:              qgcPal.text
+custom-example/res/CustomFlyViewOverlay.qml:249:        color:                  qgcPal.windowShade
+CodingStyle.qml:42:        id:                 qgcPal  // Note how id does not use an underscore
+CodingStyle.qml:58:        color:  qgcPal.window   // Use QGC palette colors for everything, no hardcoded colors
+custom/res/Custom/CustomFlightModeMenuIndicator.qml:58:            color: qgcPal.window
+custom/res/Custom/CustomFlightModeMenuIndicator.qml:59:            border.color: qgcPal.text
+custom/res/Custom/PasswordSettings.qml:13:    color:          qgcPal.window
+custom/res/Custom/PasswordSettings.qml:20:        id: qgcPal
+custom/res/Custom/PasswordSettings.qml:78:                        loginMessage.color = qgcPal.statusPassedText
+custom/res/Custom/PasswordSettings.qml:83:                        loginMessage.color = qgcPal.statusFailedText
+custom/res/Custom/PasswordSettings.qml:92:                color: qgcPal.text
+src/Taisync/TaisyncSettings.qml:32:    color:              qgcPal.window
+src/Taisync/TaisyncSettings.qml:57:                color:          qgcPal.colorOrange
+src/Taisync/TaisyncSettings.qml:78:                color:                      qgcPal.windowShade
+src/Taisync/TaisyncSettings.qml:119:                color:                      qgcPal.windowShade
+src/Taisync/TaisyncSettings.qml:139:                            color:          QGroundControl.taisyncManager.connected ? qgcPal.colorGreen : qgcPal.colorRed
+src/Taisync/TaisyncSettings.qml:147:                            color:          QGroundControl.taisyncManager.linkConnected ? qgcPal.colorGreen : qgcPal.colorRed
+src/Taisync/TaisyncSettings.qml:181:                color:                      qgcPal.windowShade
+src/Taisync/TaisyncSettings.qml:229:                color:                      qgcPal.windowShade
+src/Taisync/TaisyncSettings.qml:282:                color:                      qgcPal.windowShade
+src/Taisync/TaisyncSettings.qml:344:                color:                      qgcPal.windowShade
+src/Taisync/TaisyncSettings.qml:445:                color:                      qgcPal.windowShade
+src/AnalyzeView/VibrationPage.qml:43:    QGCPalette { id:qgcPal; colorGroupEnabled: true }
+src/AnalyzeView/VibrationPage.qml:64:                        border.color:       qgcPal.text
+src/AnalyzeView/VibrationPage.qml:70:                            color:          qgcPal.text
+src/AnalyzeView/VibrationPage.qml:109:                        border.color:       qgcPal.text
+src/AnalyzeView/VibrationPage.qml:115:                            color:          qgcPal.text
+src/AnalyzeView/VibrationPage.qml:154:                        border.color:       qgcPal.text
+src/AnalyzeView/VibrationPage.qml:160:                            color:          qgcPal.text
+src/AnalyzeView/VibrationPage.qml:216:                color:          qgcPal.window
+src/AnalyzeView/AnalyzeView.qml:22:    color:  qgcPal.window
+src/AnalyzeView/AnalyzeView.qml:112:        color:                  qgcPal.windowShade
+src/AnalyzeView/AnalyzePage.qml:89:        color:                  qgcPal.text
+src/AnalyzeView/MAVLinkInspectorPage.qml:146:                            color:      qgcPal.buttonHighlight
+src/AnalyzeView/MAVLinkInspectorPage.qml:191:                            color:              qgcPal.text
+src/AnalyzeView/MavlinkConsolePage.qml:154:                    textColor:          qgcPal.text
+src/AnalyzeView/MavlinkConsolePage.qml:155:                    backgroundColor:    qgcPal.windowShade
+src/AnalyzeView/MavlinkConsolePage.qml:156:                    selectedTextColor:  qgcPal.windowShade
+src/AnalyzeView/MavlinkConsolePage.qml:157:                    selectionColor:     qgcPal.text
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:69:    QGCPalette { id: qgcPal }
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:468:                color:              Qt.rgba(qgcPal.window.r, qgcPal.window.g, qgcPal.window.b, 0.85)
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:742:            color:              Qt.rgba(qgcPal.window.r, qgcPal.window.g, qgcPal.window.b, 0.85)
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:834:                        color:          qgcPal.window
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:835:                        border.color:   qgcPal.text
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:882:                                    color:          qgcPal.button
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:884:                                    border.color:   qgcPal.buttonText
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:890:                                        color:              qgcPal.buttonText
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:925:                                    color:          qgcPal.button
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:927:                                    border.color:   qgcPal.buttonText
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:933:                                        color:              qgcPal.buttonText
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:965:                        color:      qgcPal.warningText
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:1163:            color:          qgcPal.windowShadeDark
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:1164:            border.color:   qgcPal.text
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:1217:            color:          qgcPal.windowShadeDark
+src/QtLocationPlugin/QMLControl/OfflineMap.qml:1218:            border.color:   qgcPal.text
+src/AutoPilotPlugins/PX4/PowerComponentSummary.qml:26:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/AutoPilotPlugins/PX4/SensorsSetup.qml:525:                    textColor: qgcPal.text
+src/AutoPilotPlugins/PX4/SensorsSetup.qml:526:                    backgroundColor: qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SensorsSetup.qml:535:                color:      qgcPal.windowShade
+src/AutoPilotPlugins/PX4/PX4FlightBehaviorCopter.qml:30:        id:                 qgcPal
+src/AutoPilotPlugins/PX4/PX4FlightBehaviorCopter.qml:79:                    color:              qgcPal.warningText
+src/AutoPilotPlugins/PX4/PX4SimpleFlightModes.qml:75:                        color:              qgcPal.windowShade
+src/AutoPilotPlugins/PX4/PX4SimpleFlightModes.qml:98:                                    color:              (controller.activeFlightMode - 1) == index ? "yellow" : qgcPal.text
+src/AutoPilotPlugins/PX4/PX4SimpleFlightModes.qml:136:                        color:  qgcPal.windowShade
+src/AutoPilotPlugins/PX4/PX4SimpleFlightModes.qml:168:                                        color:              swActive ? "yellow" : qgcPal.text
+src/AutoPilotPlugins/PX4/PowerComponent.qml:37:            readonly property string    _highlightPrefix:           "<font color=\"" + qgcPal.warningText + "\">"
+src/AutoPilotPlugins/PX4/PowerComponent.qml:118:                            color:              qgcPal.warningText
+src/AutoPilotPlugins/PX4/PowerComponent.qml:177:                            color:              qgcPal.warningText
+src/AutoPilotPlugins/PX4/PowerComponent.qml:285:                                color:                  qgcPal.text
+src/AutoPilotPlugins/PX4/AirframeComponent.qml:153:                        color:  qgcPal.window
+src/AutoPilotPlugins/PX4/AirframeComponent.qml:178:                            color:              airframeCheckBox.checked ? qgcPal.buttonHighlight : qgcPal.windowShade
+src/AutoPilotPlugins/PX4/CameraComponent.qml:113:                            color:              qgcPal.text
+src/AutoPilotPlugins/PX4/CameraComponent.qml:156:                            color:              qgcPal.text
+src/AutoPilotPlugins/PX4/CameraComponent.qml:171:                            color:              qgcPal.text
+src/AutoPilotPlugins/PX4/CameraComponent.qml:226:                                            border.color:   qgcPal.text
+src/AutoPilotPlugins/PX4/CameraComponent.qml:232:                                                        return qgcPal.windowShadeDark
+src/AutoPilotPlugins/PX4/CameraComponent.qml:236:                                                    return qgcPal.windowShade
+src/AutoPilotPlugins/PX4/CameraComponent.qml:243:                                                    auxPin.color = _auxChannels[model.index] ? "green" : qgcPal.windowShadeDark
+src/AutoPilotPlugins/PX4/CameraComponent.qml:291:                                    color:              qgcPal.text
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:73:                    color:                  qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:85:                                source:             qgcPal.globalTheme === QGCPalette.Light ? "/qmlimages/LowBatteryLight.svg" : "/qmlimages/LowBattery.svg"
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:143:                    color:                  qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:153:                                color:              qgcPal.text
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:255:                    color:                  qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:267:                                source:             qgcPal.globalTheme === QGCPalette.Light ? "/qmlimages/RCLossLight.svg" : "/qmlimages/RCLoss.svg"
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:307:                    color:                  qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:319:                                source:             qgcPal.globalTheme === QGCPalette.Light ? "/qmlimages/DatalinkLossLight.svg" : "/qmlimages/DatalinkLoss.svg"
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:359:                    color:                  qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:371:                                source:             qgcPal.globalTheme === QGCPalette.Light ? "/qmlimages/GeoFenceLight.svg" : "/qmlimages/GeoFence.svg"
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:429:                    color:              qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:439:                                color:              qgcPal.text
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:526:                    color:              qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:536:                                color:              qgcPal.text
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:584:                    color:              qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:596:                                source:             qgcPal.globalTheme === QGCPalette.Light ? "/qmlimages/no-logging-light.svg" : "/qmlimages/no-logging.svg"
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:635:                    color:              qgcPal.windowShade
+src/AutoPilotPlugins/PX4/SafetyComponent.qml:646:                                color:              qgcPal.text
+src/AutoPilotPlugins/PX4/ActuatorComponent.qml:56:                    color:                  qgcPal.windowShade
+src/AutoPilotPlugins/PX4/ActuatorComponent.qml:183:                    color:                    qgcPal.windowShade
+src/AutoPilotPlugins/PX4/ActuatorComponent.qml:231:                                color:  qgcPal.warningText
+src/AutoPilotPlugins/PX4/ActuatorComponent.qml:328:                    color:         qgcPal.warningText
+src/AutoPilotPlugins/PX4/ActuatorComponent.qml:352:                    color:                          qgcPal.windowShade
+src/AutoPilotPlugins/PX4/ActuatorComponent.qml:535:                                        color:      qgcPal.warningText
+src/AutoPilotPlugins/APM/APMSafetyComponentSummaryPlane.qml:11:    color:          qgcPal.windowShadeDark
+src/AutoPilotPlugins/APM/APMRemoteSupportComponent.qml:31:            color:              qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMSafetyComponentSummaryCopter.qml:11:    color:          qgcPal.windowShadeDark
+src/AutoPilotPlugins/APM/APMLightsComponent.qml:179:                        color:              qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMSafetyComponentCopter.qml:564:                            color:          qgcPal.warningText
+src/AutoPilotPlugins/APM/APMSensorsComponent.qml:183:            QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/AutoPilotPlugins/APM/APMSensorsComponent.qml:580:                                textColor:  isNaN(parseFloat(text)) ? qgcPal.warningText: qgcPal.textFieldText
+src/AutoPilotPlugins/APM/APMSensorsComponent.qml:587:                                textColor:  isNaN(parseFloat(text)) ? qgcPal.warningText: qgcPal.textFieldText
+src/AutoPilotPlugins/APM/APMSensorsComponent.qml:799:                            textColor:          qgcPal.text
+src/AutoPilotPlugins/APM/APMSensorsComponent.qml:800:                            backgroundColor:    qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMSensorsComponent.qml:808:                        color:          qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMTuningComponentCopter.qml:136:                    color:              qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMTuningComponentCopter.qml:287:                                color:      qgcPal.warningText
+src/AutoPilotPlugins/APM/APMTuningComponentCopter.qml:318:                        color:  qgcPal.window
+src/AutoPilotPlugins/APM/APMTuningComponentCopter.qml:331:                            color:          qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMTuningComponentCopter.qml:378:                        color:      qgcPal.window
+src/AutoPilotPlugins/APM/APMTuningComponentCopter.qml:391:                            color:          qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMTuningComponentCopter.qml:407:                                        //color:            controller.channelOptionEnabled[modelData] ? "yellow" : qgcPal.text
+src/AutoPilotPlugins/APM/APMTuningComponentCopter.qml:425:                                        //color:            controller.channelOptionEnabled[modelData] ? "yellow" : qgcPal.text
+src/AutoPilotPlugins/APM/APMTuningComponentCopter.qml:437:                                        //color:            controller.channelOptionEnabled[modelData] ? "yellow" : qgcPal.text
+src/AutoPilotPlugins/APM/APMSubMotorComponent.qml:124:                        color:              qgcPal.text
+src/AutoPilotPlugins/APM/APMSubMotorComponent.qml:204:                    color:  qgcPal.warningText
+src/AutoPilotPlugins/APM/APMSubMotorComponent.qml:262:                            color:  qgcPal.text
+src/AutoPilotPlugins/APM/APMSubMotorComponent.qml:266:                                color: qgcPal.window
+src/AutoPilotPlugins/APM/APMCameraSubComponent.qml:226:                        color:              qgcPal.button
+src/AutoPilotPlugins/APM/APMCameraSubComponent.qml:227:                        border.color:       qgcPal.buttonText
+src/AutoPilotPlugins/APM/APMSafetyComponentRover.qml:173:                            color:          qgcPal.warningText
+src/AutoPilotPlugins/APM/APMSafetyComponentSummaryRover.qml:20:    color:          qgcPal.windowShadeDark
+src/AutoPilotPlugins/APM/APMAirframeComponent.qml:103:                        color:  qgcPal.window
+src/AutoPilotPlugins/APM/APMAirframeComponent.qml:132:                            color:              airframeCheckBox.checked ? qgcPal.buttonHighlight : qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMAirframeComponent.qml:168:                                    color:          qgcPal.buttonHighlightText
+src/AutoPilotPlugins/APM/APMFlightModesComponent.qml:39:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/AutoPilotPlugins/APM/APMFlightModesComponent.qml:66:                    color:  qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMFlightModesComponent.qml:107:                                    color:  controller.activeFlightMode == index ? "yellow" : qgcPal.text
+src/AutoPilotPlugins/APM/APMFlightModesComponent.qml:193:                    color:  qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMFlightModesComponent.qml:214:                                    color:              controller.channelOptionEnabled[modelData + (_ch7OptAvailable ? 1 : 0)] ? "yellow" : qgcPal.text
+src/AutoPilotPlugins/APM/APMSafetyComponent.qml:227:                        color:  qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMSafetyComponent.qml:680:                        color:  qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMSafetyComponent.qml:755:                            color:          qgcPal.warningText
+src/AutoPilotPlugins/APM/APMSafetyComponentSub.qml:387:                            color:          qgcPal.warningText
+src/AutoPilotPlugins/APM/APMPowerComponent.qml:253:                                color:  qgcPal.warningText
+src/AutoPilotPlugins/APM/APMMotorComponent.qml:40:                color:      qgcPal.warningText
+src/AutoPilotPlugins/APM/APMMotorComponent.qml:141:                    color:  qgcPal.warningText
+src/AutoPilotPlugins/APM/APMFollowComponent.qml:331:                        color:                      qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMFollowComponent.qml:339:                        color:                  qgcPal.windowShade
+src/AutoPilotPlugins/APM/APMFollowComponent.qml:399:                            color:      qgcPal.text
+src/AutoPilotPlugins/APM/APMFollowComponent.qml:407:                                color:                      qgcPal.text
+src/AutoPilotPlugins/APM/APMFollowComponent.qml:415:                                color:                      qgcPal.text
+src/AutoPilotPlugins/APM/APMFollowComponent.qml:477:                            color:                      qgcPal.text
+src/AutoPilotPlugins/APM/APMFollowComponent.qml:485:                                color:                      qgcPal.text
+src/AutoPilotPlugins/APM/APMFollowComponent.qml:493:                                color:                      qgcPal.text
+src/AutoPilotPlugins/APM/APMSubFrameComponent.qml:149:                        color:  qgcPal.window
+src/AutoPilotPlugins/APM/APMSubFrameComponent.qml:162:                            color:              subFrameModel.get(index).paramValue == _frameConfig.value ? qgcPal.buttonHighlight: qgcPal.windowShade
+src/AutoPilotPlugins/Common/RadioComponent.qml:43:            QGCPalette { id: qgcPal; colorGroupEnabled: radioPage.enabled }
+src/AutoPilotPlugins/Common/RadioComponent.qml:112:                    property color          __barColor:         qgcPal.windowShade
+src/AutoPilotPlugins/Common/RadioComponent.qml:132:                        color:                      qgcPal.window
+src/AutoPilotPlugins/Common/RadioComponent.qml:141:                        color:                  qgcPal.text
+src/AutoPilotPlugins/Common/RadioComponent.qml:346:                    border.color:   qgcPal.text
+src/AutoPilotPlugins/Common/SyslinkComponent.qml:50:                color:  qgcPal.windowShade
+src/AutoPilotPlugins/Common/MotorComponent.qml:40:                color:      qgcPal.warningText
+src/AutoPilotPlugins/Common/MotorComponent.qml:141:                    color:  qgcPal.warningText
+src/AutoPilotPlugins/Common/ESP8266Component.qml:120:                    color:                              qgcPal.windowShade
+src/AutoPilotPlugins/Common/ESP8266Component.qml:128:                            color:                      qgcPal.text
+src/AutoPilotPlugins/Common/ESP8266Component.qml:281:                    color:                              qgcPal.windowShade
+src/QmlControls/ToolStripHoverButton.qml:40:    property color _currentContentColor:  (checked || pressed) ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/ToolStripHoverButton.qml:41:    property color _currentContentColorSecondary:  (checked || pressed) ? qgcPal.buttonText : qgcPal.buttonHighlight
+src/QmlControls/ToolStripHoverButton.qml:59:    QGCPalette { id: qgcPal; colorGroupEnabled: control.enabled }
+src/QmlControls/ToolStripHoverButton.qml:130:                            qgcPal.buttonHighlight :
+src/QmlControls/ToolStripHoverButton.qml:131:                            (control.hovered ? qgcPal.toolStripHoverColor : qgcPal.toolbarBackground)
+src/QmlControls/ParameterEditorDialog.qml:45:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/QmlControls/ParameterEditorDialog.qml:104:            color:              qgcPal.warningText
+src/QmlControls/MissionItemIndexLabel.qml:21:    property var    color:                  checked ? "green" : (child ? qgcPal.mapIndicatorChild : qgcPal.mapIndicator)
+src/QmlControls/MissionItemIndexLabel.qml:50:    QGCPalette { id: qgcPal }
+src/QmlControls/InstrumentValueLabel.qml:31:    property var    _color:                     instrumentValueData.isValidColor(instrumentValueData.currentColor) ? instrumentValueData.currentColor : qgcPal.text
+src/QmlControls/InstrumentValueLabel.qml:33:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/InstrumentValueLabel.qml:71:            color:          qgcPal.text
+src/QmlControls/PreFlightCheckGroup.qml:51:        color:          failed ? qgcPal.statusFailedText : (passed ? qgcPal.statusPassedText : qgcPal.statusPendingText)
+src/QmlControls/PreFlightCheckButton.qml:70:        color:          qgcPal.button
+src/QmlControls/PreFlightCheckButton.qml:71:        border.color:   qgcPal.button;
+src/QmlControls/PreFlightCheckButton.qml:85:        color:                  qgcPal.buttonText
+src/QmlControls/ToolStrip.qml:20:    color:      qgcPal.toolbarBackground
+src/QmlControls/QGCTabButton.qml:26:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/QGCTabButton.qml:36:    icon.color: checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/QGCTabButton.qml:47:        color: checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/QGCTabButton.qml:52:        color: checked ? qgcPal.buttonHighlight : qgcPal.button
+src/QmlControls/SliderSwitch.qml:14:    color:          qgcPal.windowShade
+src/QmlControls/SliderSwitch.qml:53:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/QmlControls/SliderSwitch.qml:62:        color:                      qgcPal.buttonText
+src/QmlControls/SliderSwitch.qml:72:        color:      qgcPal.primaryButton
+src/QmlControls/SliderSwitch.qml:82:            color:                  qgcPal.buttonText
+src/QmlControls/AppMessages.qml:37:            color:           qgcPal.window
+src/QmlControls/AppMessages.qml:55:                    color:  index % 2 == 0 ? qgcPal.window : qgcPal.windowShade
+src/QmlControls/SubMenuButton.qml:32:            id:                 qgcPal
+src/QmlControls/SubMenuButton.qml:40:            color:  showHighlight ? qgcPal.buttonHighlight : qgcPal.windowShade
+src/QmlControls/SubMenuButton.qml:53:                color:                  imageColor ? imageColor : (control.setupComplete ? qgcPal.button : "red")
+src/QmlControls/SubMenuButton.qml:64:                color:                  showHighlight ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/QGCButton.qml:19:    property bool   showBorder:     qgcPal.globalTheme === QGCPalette.Light
+src/QmlControls/QGCButton.qml:34:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/QGCButton.qml:42:        border.color:   qgcPal.buttonText
+src/QmlControls/QGCButton.qml:44:                            qgcPal.buttonHighlight :
+src/QmlControls/QGCButton.qml:45:                            (primary ? qgcPal.primaryButton : qgcPal.button)
+src/QmlControls/QGCButton.qml:77:                                        qgcPal.buttonHighlightText :
+src/QmlControls/QGCButton.qml:78:                                        (primary ? qgcPal.primaryButtonText : qgcPal.buttonText)
+src/QmlControls/QGCListView.qml:10:    property color indicatorColor: qgcPal.text
+src/QmlControls/QGCListView.qml:12:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/MAVLinkChart.qml:18:    backgroundColor:    qgcPal.window
+src/QmlControls/MAVLinkChart.qml:61:        labelsColor:                qgcPal.text
+src/QmlControls/MAVLinkChart.qml:72:        labelsColor:                qgcPal.text
+src/QmlControls/SectionHeader.qml:26:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/SectionHeader.qml:58:                    color:                  qgcPal.text
+src/QmlControls/SectionHeader.qml:66:                color:              qgcPal.text
+src/QmlControls/QGCSlider.qml:36:                color:          qgcPal.button
+src/QmlControls/QGCSlider.qml:38:                border.color:   qgcPal.buttonText
+src/QmlControls/QGCSlider.qml:56:                    color:          qgcPal.colorBlue
+src/QmlControls/QGCSlider.qml:65:            color:          qgcPal.button
+src/QmlControls/QGCSlider.qml:66:            border.color:   qgcPal.buttonText
+src/QmlControls/QGCSlider.qml:80:                color:              qgcPal.buttonText
+src/QmlControls/LogReplayStatusBar.qml:12:    color:              qgcPal.window
+src/QmlControls/LogReplayStatusBar.qml:26:    QGCPalette { id: qgcPal }
+src/QmlControls/QGCTextField.qml:11:    textColor:          qgcPal.textFieldText
+src/QmlControls/QGCTextField.qml:32:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/QGCTextField.qml:76:                color:                  qgcPal.textField
+src/QmlControls/QGCTextField.qml:122:                        color:              qgcPal.textField
+src/QmlControls/RoundButton.qml:23:    QGCPalette { id: qgcPal }
+src/QmlControls/RoundButton.qml:44:        border.color:   lightBorders ? qgcPal.mapWidgetBorderLight : qgcPal.mapWidgetBorderDark
+src/QmlControls/RoundButton.qml:45:        color:          checked ? qgcPal.buttonHighlight : qgcPal.button
+src/QmlControls/RoundButton.qml:54:            color:              checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/QGCToolBarButton.qml:36:        color:          button.checked ? qgcPal.buttonHighlight : Qt.rgba(0,0,0,0)
+src/QmlControls/QGCToolBarButton.qml:50:            color:                  logo ? "transparent" : (button.checked ? qgcPal.buttonHighlightText : qgcPal.buttonText)
+src/QmlControls/QGCToolBarButton.qml:58:            color:                  button.checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/DropPanel.qml:90:    QGCPalette { id: qgcPal }
+src/QmlControls/DropPanel.qml:139:                context.fillStyle = qgcPal.windowShade
+src/QmlControls/QGCComboBox.qml:38:    property var    _qgcPal:            QGCPalette { colorGroupEnabled: enabled }
+src/QmlControls/QGCComboBox.qml:89:            color:                  control.currentIndex === index ? _qgcPal.buttonHighlightText : _qgcPal.buttonText
+src/QmlControls/QGCComboBox.qml:94:            color:                  control.currentIndex === index ? _qgcPal.buttonHighlight : _qgcPal.button
+src/QmlControls/QGCComboBox.qml:107:        color:                  _qgcPal.text
+src/QmlControls/QGCComboBox.qml:121:            color:                      _qgcPal.text
+src/QmlControls/QGCComboBox.qml:128:        color:          _qgcPal.window
+src/QmlControls/QGCComboBox.qml:129:        border.color:   _qgcPal.text
+src/QmlControls/QGCComboBox.qml:151:                border.color:   _qgcPal.text
+src/QmlControls/AxisMonitor.qml:17:    property color  __barColor:         qgcPal.windowShade
+src/QmlControls/AxisMonitor.qml:48:        color:                      qgcPal.window
+src/QmlControls/AxisMonitor.qml:58:        color:                  qgcPal.text
+src/QmlControls/QGCColumnButton.qml:18:        border.color:   qgcPal.buttonText
+src/QmlControls/QGCColumnButton.qml:20:                            qgcPal.buttonHighlight :
+src/QmlControls/QGCColumnButton.qml:21:                            (primary ? qgcPal.primaryButton : qgcPal.button)
+src/QmlControls/QGCColumnButton.qml:37:                color:                  qgcPal.text
+src/QmlControls/QGCColumnButton.qml:55:                    color:                      _showHighlight ? qgcPal.buttonHighlightText : (primary ? qgcPal.primaryButtonText : qgcPal.buttonText)
+src/QmlControls/PreFlightCheckList.qml:21:    color:  qgcPal.windowShade
+src/QmlControls/QGCFlickable.qml:13:    property color indicatorColor: qgcPal.text
+src/QmlControls/QGCFileDialog.qml:88:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/QmlControls/QGCFileDialog.qml:220:                    color:          qgcPal.warningText
+src/QmlControls/ModeSwitchDisplay.qml:33:    color:                  _qgcPal.window
+src/QmlControls/ModeSwitchDisplay.qml:37:    QGCPalette { id: _qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/ModeSwitchDisplay.qml:55:                    color:  modeSelected ? _qgcPal.buttonHighlight : _qgcPal.button
+src/QmlControls/ModeSwitchDisplay.qml:62:                        color:                  modeSelected ? _qgcPal.buttonHighlightText : _qgcPal.text
+src/QmlControls/ModeSwitchDisplay.qml:112:                        color:                  _qgcPal.windowShadeDark
+src/QmlControls/ModeSwitchDisplay.qml:122:                        color:                  _qgcPal.text
+src/QmlControls/ModeSwitchDisplay.qml:148:                        color:                  _qgcPal.windowShadeDark
+src/QmlControls/ModeSwitchDisplay.qml:159:                        color:                  thresholdDragEnabled ? _qgcPal.buttonHighlight : _qgcPal.text
+src/QmlControls/HorizontalFactValueGrid.qml:36:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/MAVLinkMessageButton.qml:29:        color:          checked ? qgcPal.buttonHighlight : qgcPal.button
+src/QmlControls/MAVLinkMessageButton.qml:41:            color:                  checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/MAVLinkMessageButton.qml:49:            color:                  checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/MAVLinkMessageButton.qml:54:            color:                  checked ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/QGCRadioButton.qml:13:    property color  textColor:  _qgcPal.text
+src/QmlControls/QGCRadioButton.qml:14:    property var    _qgcPal:    QGCPalette { colorGroupEnabled: enabled }
+src/QmlControls/PIDTuning.qml:200:                    color:   qgcPal.text
+src/QmlControls/MultiRotorMotorDisplay.qml:14:    property var    _qgcPal:            QGCPalette { colorGroupEnabled: enabled }
+src/QmlControls/MultiRotorMotorDisplay.qml:89:                        color:                      _qgcPal.globalTheme === QGCPalette.Light ? "black" : "white"
+src/QmlControls/MultiRotorMotorDisplay.qml:102:                        color:                      _qgcPal.globalTheme === QGCPalette.Light ? "black" : "white"
+src/QmlControls/MultiRotorMotorDisplay.qml:171:            color:                      _qgcPal.text
+src/QmlControls/QmlTest.qml:372:                    property color _bkColor: qgcPal.window
+src/QmlControls/QmlTest.qml:650:                    property color backgroundColor: qgcPal.window
+src/QmlControls/QmlTest.qml:654:                    property color backgroundColor: qgcPal.windowShade
+src/QmlControls/QmlTest.qml:658:                    property color backgroundColor: qgcPal.windowShadeDark
+src/QmlControls/QmlTest.qml:689:            border.color: qgcPal.text
+src/QmlControls/QmlTest.qml:698:                    color:                      qgcPal.colorGreen
+src/QmlControls/QmlTest.qml:706:                Label { text: "colorGreen"; color: qgcPal.colorGreen; }
+src/QmlControls/QmlTest.qml:708:                    color:                      qgcPal.colorOrange
+src/QmlControls/QmlTest.qml:716:                Label { text: "colorOrange"; color: qgcPal.colorOrange; }
+src/QmlControls/QmlTest.qml:718:                    color:                      qgcPal.colorRed
+src/QmlControls/QmlTest.qml:726:                Label { text: "colorRed"; color: qgcPal.colorRed; }
+src/QmlControls/QmlTest.qml:728:                    color:                      qgcPal.colorGrey
+src/QmlControls/QmlTest.qml:736:                Label { text: "colorGrey"; color: qgcPal.colorGrey;  }
+src/QmlControls/QmlTest.qml:738:                    color:                      qgcPal.colorBlue
+src/QmlControls/QmlTest.qml:746:                Label { text: "colorBlue"; color: qgcPal.colorBlue; }
+src/QmlControls/InstrumentValueValue.qml:41:        color:              instrumentValueData.isValidColor(instrumentValueData.currentColor) ? instrumentValueData.currentColor : qgcPal.text
+src/QmlControls/QGCPopupDialog.qml:152:    QGCPalette { id: qgcPal; colorGroupEnabled: parent.enabled }
+src/QmlControls/QGCPopupDialog.qml:228:        color:  qgcPal.windowShade
+src/QmlControls/DropButton.qml:147:    QGCPalette { id: qgcPal }
+src/QmlControls/DropButton.qml:214:                context.fillStyle = qgcPal.windowShade
+src/QmlControls/QGCCheckBox.qml:9:    property color  textColor:          _qgcPal.text
+src/QmlControls/QGCCheckBox.qml:13:    property var    _qgcPal: QGCPalette { colorGroupEnabled: enabled }
+src/QmlControls/QGCCheckBox.qml:42:                color:          control.enabled ? "white" : _qgcPal.text
+src/QmlControls/QGCCheckBox.qml:43:                border.color:   _qgcPal.text
+src/QmlControls/VehicleRotationCal.qml:31:    property var __qgcPal: QGCPalette { colorGroupEnabled: enabled }
+src/QmlControls/VehicleRotationCal.qml:42:        color: qgcPal.windowShade
+src/QmlControls/QGCLabel.qml:10:    color:          qgcPal.text
+src/QmlControls/QGCLabel.qml:13:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/ParameterEditor.qml:253:                    color:  factRow.modelFact.defaultValueAvailable ? (factRow.modelFact.valueEqualsDefault ? qgcPal.text : qgcPal.warningText) : qgcPal.text
+src/QmlControls/ParameterEditor.qml:282:                color:  qgcPal.text
+src/QmlControls/QGCGroupBox.qml:19:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/QGCGroupBox.qml:25:        color:  qgcPal.windowShade
+src/QmlControls/QGCSwitch.qml:19:    QGCPalette { id:qgcPal; colorGroupEnabled: true }
+src/QmlControls/QGCSwitch.qml:24:            color:          (control.checked && control.enabled) ? qgcPal.colorGreen : qgcPal.colorGrey
+src/QmlControls/QGCSwitch.qml:26:            border.color:   qgcPal.button
+src/QmlControls/InstrumentValueEditDialog.qml:30:    QGCPalette { id: qgcPal;            colorGroupEnabled: parent.enabled }
+src/QmlControls/InstrumentValueEditDialog.qml:31:    QGCPalette { id: qgcPalDisabled;    colorGroupEnabled: false }
+src/QmlControls/InstrumentValueEditDialog.qml:109:                color:              enabled ? qgcPal.text : qgcPalDisabled.text
+src/QmlControls/InstrumentValueEditDialog.qml:122:                    color:          qgcPal.text
+src/QmlControls/InstrumentValueEditDialog.qml:311:                                border.color:   qgcPal.text
+src/QmlControls/InstrumentValueEditDialog.qml:312:                                color:          instrumentValueData.isValidColor(modelData) ? modelData : qgcPal.text
+src/QmlControls/InstrumentValueEditDialog.qml:411:                                color:              qgcPal.text
+src/QmlControls/InstrumentValueEditDialog.qml:540:                        color:  currentSelection ? qgcPal.text  : qgcPal.window
+src/QmlControls/InstrumentValueEditDialog.qml:553:                            color:              currentSelection ? qgcPal.window : qgcPal.text
+src/QmlControls/QGCTabBar.qml:11:        color: qgcPal.window
+src/QmlControls/OfflineMapButton.qml:23:        color:          _showHighlight ? qgcPal.buttonHighlight : qgcPal.button
+src/QmlControls/OfflineMapButton.qml:25:        border.color:   qgcPal.buttonText
+src/QmlControls/OfflineMapButton.qml:35:    property bool   _showBorder:    qgcPal.globalTheme === QGCPalette.Light
+src/QmlControls/OfflineMapButton.qml:49:            color:  _showHighlight ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/OfflineMapButton.qml:59:            color:  _showHighlight ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/OfflineMapButton.qml:85:            color:      _showHighlight ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/FileButton.qml:11:    color:          highlight ? qgcPal.buttonHighlight : qgcPal.button
+src/QmlControls/FileButton.qml:12:    border.color:   highlight ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/FileButton.qml:22:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/QmlControls/FileButton.qml:33:        color:                  highlight ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/FileButton.qml:46:        color:                  highlight ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/QmlControls/RCChannelMonitor.qml:48:            property color          __barColor:         qgcPal.windowShade
+src/QmlControls/RCChannelMonitor.qml:64:                color:                      qgcPal.window
+src/QmlControls/RCChannelMonitor.qml:74:                color:                  qgcPal.text
+src/QGCPalette.h:85:            color:          qgcPal.window
+src/QGCPalette.h:87:            QGCPalette { id: qgcPal: colorGroupEnabled: enabled }
+src/MissionManager/QGCMapPolygonVisuals.qml:220:    QGCPalette { id: qgcPal }
+src/MissionManager/QGCMapPolylineVisuals.qml:123:    QGCPalette { id: qgcPal }
+src/MissionManager/MissionCommandTreeEditorTestWindow.qml:28:    color:      qgcPal.window
+src/MissionManager/MissionCommandTreeEditorTestWindow.qml:32:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/FlightDisplay/FlyView.qml:148:        color:              qgcPal.window
+src/FlightDisplay/FlyViewMap.qml:594:                color: qgcPal.window
+src/FlightDisplay/FlyViewMap.qml:595:                border.color: qgcPal.text
+src/FlightDisplay/MultiVehicleList.qml:28:    QGCPalette { id: qgcPal }
+src/FlightDisplay/MultiVehicleList.qml:35:        color:          qgcPal.missionItemEditor
+src/FlightDisplay/MultiVehicleList.qml:94:            color:      qgcPal.missionItemEditor
+src/FlightDisplay/PreFlightCheckList.qml:145:                color:          qgcPal.buttonText
+src/FlightDisplay/GuidedActionList.qml:27:    color:      qgcPal.window
+src/FlightDisplay/GuidedActionList.qml:86:    QGCPalette { id: qgcPal }
+src/FlightDisplay/GuidedActionList.qml:195:        color:              qgcPal.text
+src/FlightDisplay/FlyViewMissionCompleteDialog.qml:103:                    color:              qgcPal.text
+src/FlightDisplay/FlyViewMissionCompleteDialog.qml:133:                    color:              qgcPal.warningText
+src/FlightDisplay/TelemetryValuesBar.qml:23:    color:              qgcPal.window
+src/FlightDisplay/TelemetryValuesBar.qml:45:                color:              qgcPal.text
+src/FlightDisplay/TelemetryValuesBar.qml:61:                color:              qgcPal.text
+src/FlightDisplay/TelemetryValuesBar.qml:77:                color:              qgcPal.text
+src/FlightDisplay/TerrainProgress.qml:22:    color:      qgcPal.window
+src/FlightDisplay/TerrainProgress.qml:57:    QGCPalette { id: qgcPal }
+src/FlightDisplay/GuidedActionConfirm.qml:24:    color:      qgcPal.window
+src/FlightDisplay/GuidedActionConfirm.qml:83:    QGCPalette { id: qgcPal }
+src/FlightDisplay/GuidedActionConfirm.qml:136:                color:  qgcPal.primaryButton
+src/FlightDisplay/GuidedActionConfirm.qml:143:                    color:              qgcPal.text
+src/FirstRunPromptDialogs/UnitsFirstRunPrompt.qml:73:            color:                  qgcPal.windowShade
+src/FirstRunPromptDialogs/OfflineVehicleFirstRunPrompt.qml:44:            color:                  qgcPal.windowShade
+src/PlanView/MissionSettingsEditor.qml:19:    color:              qgcPal.windowShadeDark
+src/PlanView/MissionSettingsEditor.qml:46:    QGCPalette { id: qgcPal }
+src/PlanView/TransectStyleComplexItemTerrainFollow.qml:44:                color:      qgcPal.text
+src/PlanView/PlanView.qml:618:            color:              qgcPal.window
+src/PlanView/PlanView.qml:895:                        color:  button.pressed || button.highlighted ? qgcPal.buttonHighlight : qgcPal.button
+src/PlanView/PlanView.qml:917:                            color:                  button.pressed || button.highlighted ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/PlanView/GeoFenceEditor.qml:30:        color:  qgcPal.missionItemEditor
+src/PlanView/GeoFenceEditor.qml:48:            color:              qgcPal.windowShadeDark
+src/PlanView/FWLandingPatternEditor.qml:28:    color:      qgcPal.windowShadeDark
+src/PlanView/FWLandingPatternEditor.qml:237:                color:                  qgcPal.warningText
+src/PlanView/FWLandingPatternEditor.qml:246:                color:                  qgcPal.warningText
+src/PlanView/FWLandingPatternEditor.qml:255:                color:                  qgcPal.warningText
+src/PlanView/PlanToolBar.qml:15:    color:              qgcPal.globalTheme === QGCPalette.Light ? Qt.rgba(1,1,1,0.8) : Qt.rgba(0,0,0,0.75)
+src/PlanView/PlanToolBar.qml:24:        visible:        qgcPal.globalTheme === QGCPalette.Light
+src/PlanView/TerrainStatus.qml:21:    color:      qgcPal.window
+src/PlanView/TerrainStatus.qml:38:    QGCPalette { id: qgcPal }
+src/PlanView/PlanToolBarIndicators.qml:271:        color:          qgcPal.colorGreen
+src/PlanView/PlanToolBarIndicators.qml:288:        color:          qgcPal.window
+src/PlanView/PlanToolBarIndicators.qml:292:        property bool _showLargeProgress:       progressBar.visible && !_userHide && qgcPal.globalTheme === QGCPalette.Light
+src/PlanView/PlanToolBarIndicators.qml:303:            color:          qgcPal.colorGreen
+src/PlanView/TransectStyleComplexItemEditor.qml:20:    color:      qgcPal.windowShadeDark
+src/PlanView/TransectStyleComplexItemEditor.qml:56:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/PlanView/TransectStyleComplexItemEditor.qml:94:                    color:              qgcPal.warningText
+src/PlanView/SimpleItemEditor.qml:17:    color:  qgcPal.windowShadeDark
+src/PlanView/SimpleItemEditor.qml:49:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/PlanView/SimpleItemEditor.qml:169:                            color:      qgcPal.text
+src/PlanView/MissionItemStatus.qml:24:    color:      qgcPal.window
+src/PlanView/MissionItemStatus.qml:40:    QGCPalette { id: qgcPal }
+src/PlanView/MissionItemStatus.qml:90:                color:                      _terrainAvailable ? (object.terrainCollision ? "red": qgcPal.text) : "yellow"
+src/PlanView/MissionItemStatus.qml:110:                color:                  qgcPal.window
+src/PlanView/RallyPointItemEditor.qml:14:    color:  _currentItem ? qgcPal.missionItemEditor : qgcPal.windowShade
+src/PlanView/RallyPointItemEditor.qml:23:    property color  _outerTextColor:    qgcPal.text // _currentItem ? "black" : qgcPal.text
+src/PlanView/RallyPointItemEditor.qml:29:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/PlanView/RallyPointItemEditor.qml:64:            color:                  qgcPal.text
+src/PlanView/RallyPointItemEditor.qml:89:        color:              qgcPal.windowShadeDark
+src/PlanView/StructureScanEditor.qml:21:    color:      qgcPal.windowShadeDark
+src/PlanView/StructureScanEditor.qml:50:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/PlanView/StructureScanEditor.qml:99:                    color:          qgcPal.warningText
+src/PlanView/MissionItemEditor.qml:20:    color:          _currentItem ? qgcPal.missionItemEditor : qgcPal.windowShade
+src/PlanView/MissionItemEditor.qml:24:    border.color:   qgcPal.warningText
+src/PlanView/MissionItemEditor.qml:38:    property color  _outerTextColor:            _currentItem ? qgcPal.primaryButtonText : qgcPal.text
+src/PlanView/MissionItemEditor.qml:53:        id: qgcPal
+src/PlanView/MissionItemEditor.qml:92:            border.color:           qgcPal.warningText
+src/PlanView/MissionItemEditor.qml:102:                color:              qgcPal.warningText
+src/PlanView/MissionItemEditor.qml:116:            color:                  qgcPal.text
+src/PlanView/MissionItemEditor.qml:148:                    color:              qgcPal.text
+src/PlanView/MissionItemEditor.qml:193:        color:                  qgcPal.text
+src/PlanView/MissionItemEditor.qml:271:        color:                  qgcPal.warningText
+src/PlanView/CameraCalcGrid.qml:32:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/PlanView/CameraCalcCamera.qml:27:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/PlanView/VTOLLandingPatternEditor.qml:28:    color:      qgcPal.windowShadeDark
+src/PlanView/VTOLLandingPatternEditor.qml:216:                color:                  qgcPal.warningText
+src/PlanView/VTOLLandingPatternEditor.qml:225:                color:                  qgcPal.warningText
+src/PlanView/VTOLLandingPatternEditor.qml:234:                color:                  qgcPal.warningText
+src/PlanView/RallyPointEditorHeader.qml:23:        color:  qgcPal.missionItemEditor
+src/PlanView/RallyPointEditorHeader.qml:40:            color:              qgcPal.windowShadeDark
+src/FactSystem/FactControls/FactValueSlider.qml:13:    color:  qgcPal.textField
+src/FactSystem/FactControls/FactValueSlider.qml:40:    QGCPalette { id: qgcPal; colorGroupEnabled: parent.enabled }
+src/FactSystem/FactControls/FactValueSlider.qml:41:    QGCPalette { id: qgcPalDisabled; colorGroupEnabled: false }
+src/FactSystem/FactControls/FactValueSlider.qml:93:            color:                  qgcPal.textFieldText
+src/FactSystem/FactControls/FactValueSlider.qml:123:        color:      qgcPal.textField
+src/FactSystem/FactControls/FactValueSlider.qml:131:        color:          qgcPal.textField
+src/FactSystem/FactControls/FactValueSlider.qml:141:        border.color:   qgcPal.brandingBlue
+src/FlightMap/Widgets/QGCMapToolButton.qml:12:    property var __qgcPal: QGCPalette { colorGroupEnabled: enabled }
+src/FlightMap/Widgets/QGCMapToolButton.qml:58:                color: __showHighlight ? __qgcPal.buttonHighlight : (__checked ? __qgcPal.buttonHighlight : __qgcPal.window);
+src/FlightMap/Widgets/QGCMapToolButton.qml:66:                color: __showHighlight ? __qgcPal.buttonHighlightText : (__checked ? __qgcPal.primaryButtonText : __qgcPal.buttonText)
+src/FlightMap/Widgets/QGCAttitudeWidget.qml:39:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/FlightMap/Widgets/QGCAttitudeWidget.qml:121:        border.color:   qgcPal.text
+src/FlightMap/Widgets/QGCCompassWidget.qml:70:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/FlightMap/Widgets/QGCCompassWidget.qml:76:        color:          qgcPal.window
+src/FlightMap/Widgets/QGCCompassWidget.qml:77:        border.color:   qgcPal.text
+src/FlightMap/Widgets/QGCCompassWidget.qml:158:            color:              qgcPal.text
+src/FlightMap/Widgets/QGCCompassWidget.qml:171:            border.color:       qgcPal.text
+src/FlightMap/Widgets/QGCCompassWidget.qml:172:            color:              qgcPal.window
+src/FlightMap/Widgets/QGCCompassWidget.qml:179:                color:              qgcPal.text
+src/FlightMap/Widgets/QGCInstrumentWidget.qml:30:    QGCPalette { id: qgcPal }
+src/FlightMap/Widgets/QGCInstrumentWidget.qml:37:        color:              qgcPal.window
+src/FlightMap/Widgets/PhotoVideoControl.qml:28:    color:      Qt.rgba(qgcPal.window.r, qgcPal.window.g, qgcPal.window.b, 0.5)
+src/FlightMap/Widgets/PhotoVideoControl.qml:151:    QGCPalette { id: qgcPal; colorGroupEnabled: enabled }
+src/FlightMap/Widgets/PhotoVideoControl.qml:162:        color:              qgcPal.text
+src/FlightMap/Widgets/PhotoVideoControl.qml:186:            color:              qgcPal.windowShadeLight
+src/FlightMap/Widgets/PhotoVideoControl.qml:195:                color:                  _modeIndicatorPhotoMode ? qgcPal.windowShadeLight : qgcPal.window
+src/FlightMap/Widgets/PhotoVideoControl.qml:198:                border.color:           qgcPal.text
+src/FlightMap/Widgets/PhotoVideoControl.qml:208:                    color:              _modeIndicatorPhotoMode ? qgcPal.text : qgcPal.colorGreen
+src/FlightMap/Widgets/PhotoVideoControl.qml:221:                color:                  _modeIndicatorPhotoMode ? qgcPal.window : qgcPal.windowShadeLight
+src/FlightMap/Widgets/PhotoVideoControl.qml:224:                border.color:           qgcPal.text
+src/FlightMap/Widgets/PhotoVideoControl.qml:233:                    color:              _modeIndicatorPhotoMode ? qgcPal.colorGreen : qgcPal.text
+src/FlightMap/Widgets/PhotoVideoControl.qml:269:            border.color:       qgcPal.buttonText
+src/FlightMap/Widgets/PhotoVideoControl.qml:277:                color:              _canShootInCurrentMode ? qgcPal.colorRed : qgcPal.colorGrey
+src/FlightMap/Widgets/PhotoVideoControl.qml:290:            color:              _mavlinkCamera && _mavlinkCamera.trackingEnabled ? qgcPal.colorRed : qgcPal.windowShadeLight
+src/FlightMap/Widgets/PhotoVideoControl.qml:294:            border.color:       qgcPal.buttonText
+src/FlightMap/Widgets/PhotoVideoControl.qml:304:                color:              qgcPal.text
+src/FlightMap/MapItems/VehicleMapItem.qml:99:                        gradient.addColorStop(1, qgcPal.mapIndicator);
+src/FlightMap/MapItems/CameraTriggerIndicator.qml:39:            color:                    qgcPal.window
+src/FlightMap/MapItems/CameraTriggerIndicator.qml:49:                color:                    qgcPal.window
+src/ui/toolbar/GPSIndicator.qml:38:            color:  qgcPal.window
+src/ui/toolbar/GPSIndicator.qml:39:            border.color:   qgcPal.text
+src/ui/toolbar/GPSIndicator.qml:87:        color:              qgcPal.buttonText
+src/ui/toolbar/GPSIndicator.qml:99:            color:                      qgcPal.buttonText
+src/ui/toolbar/GPSIndicator.qml:106:            color:      qgcPal.buttonText
+src/ui/toolbar/GimbalIndicator.qml:46:            color:          qgcPal.window
+src/ui/toolbar/GimbalIndicator.qml:118:                    color:                  qgcPal.windowShade
+src/ui/toolbar/GimbalIndicator.qml:150:                        color:                      qgcPal.window
+src/ui/toolbar/GimbalIndicator.qml:159:                        color:                      qgcPal.window
+src/ui/toolbar/GimbalIndicator.qml:162:                        border.color:               settingsPanelVisible ? qgcPal.windowShade : qgcPal.window
+src/ui/toolbar/GimbalIndicator.qml:210:                    color:                  qgcPal.windowShade
+src/ui/toolbar/GimbalIndicator.qml:299:                        color:                   qgcPal.windowShade
+src/ui/toolbar/GimbalIndicator.qml:342:        color:                   qgcPal.buttonText
+src/ui/toolbar/FlightModeMenuIndicator.qml:33:            color: qgcPal.window
+src/ui/toolbar/FlightModeMenuIndicator.qml:34:            border.color: qgcPal.text
+src/ui/toolbar/FlightModeMenuIndicator.qml:81:            color:      qgcPal.text
+src/ui/toolbar/LinkIndicator.qml:59:        color:                  qgcPal.buttonText
+src/ui/toolbar/GPSRTKIndicator.qml:35:            color:  qgcPal.window
+src/ui/toolbar/GPSRTKIndicator.qml:36:            border.color:   qgcPal.text
+src/ui/toolbar/GPSRTKIndicator.qml:93:        color:              QGroundControl.gpsRtk.active.value ? qgcPal.colorRed : qgcPal.buttonText
+src/ui/toolbar/GPSRTKIndicator.qml:104:            color:                      qgcPal.buttonText
+src/ui/toolbar/MessageIndicator.qml:42:                return qgcPal.colorGrey
+src/ui/toolbar/MessageIndicator.qml:44:                return qgcPal.colorBlue;
+src/ui/toolbar/MessageIndicator.qml:46:                return qgcPal.colorOrange;
+src/ui/toolbar/MessageIndicator.qml:48:                return qgcPal.colorRed;
+src/ui/toolbar/MessageIndicator.qml:54:        return qgcPal.colorGrey
+src/ui/toolbar/MessageIndicator.qml:88:            color:          qgcPal.window
+src/ui/toolbar/MessageIndicator.qml:89:            border.color:   qgcPal.text
+src/ui/toolbar/MessageIndicator.qml:92:                message = message.replace(new RegExp("<#E>", "g"), "color: " + qgcPal.warningText + "; font: " + (ScreenTools.defaultFontPointSize.toFixed(0) - 1) + "pt monospace;");
+src/ui/toolbar/MessageIndicator.qml:93:                message = message.replace(new RegExp("<#I>", "g"), "color: " + qgcPal.warningText + "; font: " + (ScreenTools.defaultFontPointSize.toFixed(0) - 1) + "pt monospace;");
+src/ui/toolbar/MessageIndicator.qml:94:                message = message.replace(new RegExp("<#N>", "g"), "color: " + qgcPal.text + "; font: " + (ScreenTools.defaultFontPointSize.toFixed(0) - 1) + "pt monospace;");
+src/ui/toolbar/MessageIndicator.qml:133:                color:              qgcPal.text
+src/ui/toolbar/MessageIndicator.qml:163:                    color:              qgcPal.text
+src/ui/toolbar/MessageIndicator.qml:164:                    selectionColor:     qgcPal.text
+src/ui/toolbar/MessageIndicator.qml:165:                    selectedTextColor:  qgcPal.window
+src/ui/toolbar/MainToolBar.qml:24:    color:  qgcPal.toolbarBackground
+src/ui/toolbar/MainToolBar.qml:34:    property color  _mainStatusBGColor: qgcPal.brandingPurple
+src/ui/toolbar/MainToolBar.qml:42:    QGCPalette { id: qgcPal }
+src/ui/toolbar/MainToolBar.qml:51:        visible:        qgcPal.globalTheme === QGCPalette.Light
+src/ui/toolbar/MainToolBar.qml:128:        property bool   _outdoorPalette:        qgcPal.globalTheme === QGCPalette.Light
+src/ui/toolbar/MainToolBar.qml:175:        color:          qgcPal.colorGreen
+src/ui/toolbar/MainToolBar.qml:186:        color:          qgcPal.window
+src/ui/toolbar/MainToolBar.qml:191:        property bool _showLargeProgress:       !_initialDownloadComplete && !_userHide && qgcPal.globalTheme === QGCPalette.Light
+src/ui/toolbar/MainToolBar.qml:202:            color:          qgcPal.colorGreen
+src/ui/toolbar/ROIIndicator.qml:42:            color:                  qgcPal.window
+src/ui/toolbar/ROIIndicator.qml:80:        color:              _activeVehicle && _activeVehicle.isROIEnabled ? qgcPal.colorGreen : qgcPal.text
+src/ui/toolbar/RCRSSIIndicator.qml:39:            color:  qgcPal.window
+src/ui/toolbar/RCRSSIIndicator.qml:40:            border.color:   qgcPal.text
+src/ui/toolbar/RCRSSIIndicator.qml:85:            color:              qgcPal.buttonText
+src/ui/toolbar/SignalStrength.qml:30:    QGCPalette { id: qgcPal }
+src/ui/toolbar/SignalStrength.qml:50:        color:              qgcPal.buttonText
+src/ui/toolbar/TelemetryRSSIIndicator.qml:38:            color:  qgcPal.window
+src/ui/toolbar/TelemetryRSSIIndicator.qml:39:            border.color:   qgcPal.text
+src/ui/toolbar/TelemetryRSSIIndicator.qml:84:        color:              qgcPal.buttonText
+src/ui/toolbar/JoystickIndicator.qml:35:            color:  qgcPal.window
+src/ui/toolbar/JoystickIndicator.qml:36:            border.color:   qgcPal.text
+src/ui/toolbar/JoystickIndicator.qml:62:                        color: joystickManager.activeJoystick ? qgcPal.buttonText : "red"
+src/ui/toolbar/JoystickIndicator.qml:67:                        color: globals.activeVehicle && globals.activeVehicle.joystickEnabled ? qgcPal.buttonText : "red"
+src/ui/toolbar/JoystickIndicator.qml:91:                        return qgcPal.buttonText
+src/ui/toolbar/BatteryIndicator.qml:66:                    return qgcPal.text
+src/ui/toolbar/BatteryIndicator.qml:68:                    return qgcPal.colorOrange
+src/ui/toolbar/BatteryIndicator.qml:73:                    return qgcPal.colorRed
+src/ui/toolbar/BatteryIndicator.qml:75:                    return qgcPal.text
+src/ui/toolbar/BatteryIndicator.qml:133:            color:          qgcPal.window
+src/ui/toolbar/BatteryIndicator.qml:134:            border.color:   qgcPal.text
+src/ui/toolbar/APMSupportForwardingIndicator.qml:35:            color:  qgcPal.window
+src/ui/toolbar/RemoteIDIndicator.qml:113:            color:          qgcPal.window
+src/ui/toolbar/RemoteIDIndicator.qml:114:            border.color:   qgcPal.text
+src/ui/toolbar/MainStatusIndicator.qml:105:                _mainStatusBGColor = qgcPal.brandingPurple
+src/ui/toolbar/MainStatusIndicator.qml:159:            color:          qgcPal.window
+src/ui/toolbar/MainStatusIndicator.qml:160:            border.color:   qgcPal.text
+src/ui/toolbar/MainStatusIndicator.qml:266:                                    color:        object.severity == 'error' ? qgcPal.colorRed : object.severity == 'warning' ? qgcPal.colorOrange : qgcPal.text
+src/ui/toolbar/MainStatusIndicator.qml:281:                                    color:                  qgcPal.text
+src/ui/toolbar/MainStatusIndicator.qml:294:                                color:                    qgcPal.windowShade
+src/ui/toolbar/MainStatusIndicator.qml:364:            color:          qgcPal.window
+src/ui/toolbar/MainStatusIndicator.qml:365:            border.color:   qgcPal.text
+src/ui/AppSettings.qml:22:    color:  qgcPal.window
+src/ui/AppSettings.qml:35:    QGCPalette { id: qgcPal }
+src/ui/AppSettings.qml:114:        color:                  qgcPal.windowShade
+src/ui/MainRootWindow.qml:95:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/ui/MainRootWindow.qml:305:                        imageColor:         qgcPal.text
+src/ui/MainRootWindow.qml:321:                        imageColor:         qgcPal.text
+src/ui/MainRootWindow.qml:466:            color:          qgcPal.toolbarBackground
+src/ui/MainRootWindow.qml:481:                    color:                  qgcPal.text
+src/ui/MainRootWindow.qml:500:                    color:                  qgcPal.text
+src/ui/MainRootWindow.qml:566:            color:          qgcPal.alertBackground
+src/ui/MainRootWindow.qml:568:            border.color:   qgcPal.alertBorder
+src/ui/MainRootWindow.qml:575:                color:                      qgcPal.alertBackground
+src/ui/MainRootWindow.qml:577:                border.color:               qgcPal.alertBorder
+src/ui/MainRootWindow.qml:589:                    color:              qgcPal.alertText
+src/ui/MainRootWindow.qml:598:                color:                      qgcPal.alertBackground
+src/ui/MainRootWindow.qml:600:                border.color:               qgcPal.alertBorder
+src/ui/MainRootWindow.qml:613:                    color:              qgcPal.alertText
+src/ui/MainRootWindow.qml:623:            color:              qgcPal.alertText
+src/ui/preferences/MockLink.qml:21:    color:          qgcPal.window
+src/ui/preferences/MockLink.qml:26:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/ui/preferences/MavlinkSettings.qml:27:    color:          qgcPal.window
+src/ui/preferences/MavlinkSettings.qml:43:    QGCPalette { id: qgcPal }
+src/ui/preferences/MavlinkSettings.qml:118:                color:          qgcPal.windowShade
+src/ui/preferences/MavlinkSettings.qml:209:                color:                      qgcPal.windowShade
+src/ui/preferences/MavlinkSettings.qml:298:                color:          qgcPal.windowShade
+src/ui/preferences/MavlinkSettings.qml:385:                color:          qgcPal.windowShade
+src/ui/preferences/MavlinkSettings.qml:448:                color:          qgcPal.windowShade
+src/ui/preferences/MavlinkSettings.qml:630:                                textColor:          qgcPal.textFieldText
+src/ui/preferences/MavlinkSettings.qml:631:                                backgroundColor:    qgcPal.textField
+src/ui/preferences/MavlinkSettings.qml:687:                color:          qgcPal.windowShade
+src/ui/preferences/MavlinkSettings.qml:700:                        color:          qgcPal.window
+src/ui/preferences/MavlinkSettings.qml:701:                        border.color:   qgcPal.text
+src/ui/preferences/MavlinkSettings.qml:713:                                color:          qgcPal.window
+src/ui/preferences/MavlinkSettings.qml:731:                                        color:      object.writing ? qgcPal.warningText : qgcPal.text
+src/ui/preferences/MavlinkSettings.qml:738:                                        color:      object.writing ? qgcPal.warningText : qgcPal.text
+src/ui/preferences/GeneralSettings.qml:29:    color:              qgcPal.window
+src/ui/preferences/GeneralSettings.qml:90:                        color:                  qgcPal.windowShade
+src/ui/preferences/GeneralSettings.qml:433:                        color:                  qgcPal.windowShade
+src/ui/preferences/GeneralSettings.qml:484:                        color:                  qgcPal.windowShade
+src/ui/preferences/GeneralSettings.qml:522:                        color:                  qgcPal.windowShade
+src/ui/preferences/GeneralSettings.qml:776:                        color:                  qgcPal.windowShade
+src/ui/preferences/GeneralSettings.qml:821:                        color:                  qgcPal.windowShade
+src/ui/preferences/GeneralSettings.qml:937:                        color:                  qgcPal.windowShade
+src/ui/preferences/GeneralSettings.qml:1071:                        color:                  qgcPal.windowShade
+src/ui/preferences/GeneralSettings.qml:1135:                        color:                  qgcPal.windowShade
+src/ui/preferences/HelpSettings.qml:19:    color:          qgcPal.window
+src/ui/preferences/HelpSettings.qml:24:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/ui/preferences/HelpSettings.qml:39:                linkColor:          qgcPal.text
+src/ui/preferences/HelpSettings.qml:46:                linkColor:          qgcPal.text
+src/ui/preferences/HelpSettings.qml:53:                linkColor:          qgcPal.text
+src/ui/preferences/RemoteIDSettings.qml:26:    color:          qgcPal.window
+src/ui/preferences/RemoteIDSettings.qml:78:    QGCPalette { id: qgcPal }
+src/ui/preferences/RemoteIDSettings.qml:139:                color:                  qgcPal.windowShade
+src/ui/preferences/RemoteIDSettings.qml:156:                        color:                  _activeRID ? (_activeVehicle.remoteIDManager.armStatusGood ? qgcPal.colorGreen : qgcPal.colorRed) : qgcPal.colorGrey
+src/ui/preferences/RemoteIDSettings.qml:181:                        color:                  _activeRID ? (_activeVehicle.remoteIDManager.commsGood ? qgcPal.colorGreen : qgcPal.colorRed) : qgcPal.colorGrey
+src/ui/preferences/RemoteIDSettings.qml:198:                        color:                  _activeRID ? (_activeVehicle.remoteIDManager.gcsGPSGood ? qgcPal.colorGreen : qgcPal.colorRed) : qgcPal.colorGrey
+src/ui/preferences/RemoteIDSettings.qml:222:                        color:                  _activeRID ? (_activeVehicle.remoteIDManager.basicIDGood ? qgcPal.colorGreen : qgcPal.colorRed) : qgcPal.colorGrey
+src/ui/preferences/RemoteIDSettings.qml:246:                        color:                  _activeRID ? (_activeVehicle.remoteIDManager.operatorIDGood ? qgcPal.colorGreen : qgcPal.colorRed) : qgcPal.colorGrey
+src/ui/preferences/RemoteIDSettings.qml:315:                    color:                  qgcPal.windowShade
+src/ui/preferences/RemoteIDSettings.qml:318:                    border.color:           _activeRID ? (_activeVehicle.remoteIDManager.armStatusGood ? color : qgcPal.colorRed) : color
+src/ui/preferences/RemoteIDSettings.qml:356:                    color:                  qgcPal.windowShade
+src/ui/preferences/RemoteIDSettings.qml:439:                    color:                  qgcPal.windowShade
+src/ui/preferences/RemoteIDSettings.qml:444:                    border.color:   _activeRID ? (_activeVehicle.remoteIDManager.gcsGPSGood ? color : qgcPal.colorRed) : color
+src/ui/preferences/RemoteIDSettings.qml:678:                    color:                  qgcPal.windowShade
+src/ui/preferences/RemoteIDSettings.qml:682:                    border.color:   _activeRID ? (_activeVehicle.remoteIDManager.basicIDGood ? color : qgcPal.colorRed) : color
+src/ui/preferences/RemoteIDSettings.qml:770:                    color:                  qgcPal.windowShade
+src/ui/preferences/RemoteIDSettings.qml:775:                                    (_activeRID && !_activeVehicle.remoteIDManager.operatorIDGood ? qgcPal.colorRed : color) : color
+src/ui/preferences/RemoteIDSettings.qml:881:                    color:                  qgcPal.windowShade
+src/ui/preferences/DebugWindow.qml:28:        color:          qgcPal.window
+src/ui/preferences/DebugWindow.qml:39:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:44:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:49:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:55:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:60:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:65:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:71:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:76:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:81:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:87:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:92:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:97:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:103:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:108:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:113:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:119:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:124:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:129:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:135:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:140:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:145:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:151:            color:  qgcPal.text
+src/ui/preferences/DebugWindow.qml:156:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:161:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:167:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:172:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:177:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:183:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:188:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:193:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:199:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:204:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:209:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:215:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:220:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:225:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:231:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:236:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:241:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:247:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:252:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:257:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:263:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:268:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:273:            color:          qgcPal.text
+src/ui/preferences/DebugWindow.qml:283:        color:              qgcPal.text
+src/ui/preferences/DebugWindow.qml:290:            color:  qgcPal.window
+src/ui/preferences/LinkSettings.qml:22:    color:              qgcPal.window
+src/ui/preferences/LinkSettings.qml:33:        id:                 qgcPal
+src/ui/preferences/LinkSettings.qml:165:            color:          qgcPal.window
+src/Microhard/MicrohardSettings.qml:32:    color:              qgcPal.window
+src/Microhard/MicrohardSettings.qml:70:                    color:                      qgcPal.windowShade
+src/Microhard/MicrohardSettings.qml:105:                    color:                      qgcPal.windowShade
+src/Microhard/MicrohardSettings.qml:133:                                color:          QGroundControl.microhardManager.connected === 1 ? qgcPal.colorGreen : qgcPal.colorRed
+src/Microhard/MicrohardSettings.qml:149:                                color:          QGroundControl.microhardManager.linkConnected === 1 ? qgcPal.colorGreen : qgcPal.colorRed
+src/Microhard/MicrohardSettings.qml:183:                    color:                      qgcPal.windowShade
+src/VehicleSetup/FirmwareUpgrade.qml:45:            readonly property string highlightPrefix:   "<font color=\"" + qgcPal.warningText + "\">"
+src/VehicleSetup/FirmwareUpgrade.qml:488:                    textColor:          qgcPal.text
+src/VehicleSetup/FirmwareUpgrade.qml:489:                    backgroundColor:    qgcPal.windowShade
+src/VehicleSetup/JoystickConfigCalibration.qml:46:                    color:          qgcPal.window
+src/VehicleSetup/JoystickConfigCalibration.qml:47:                    border.color:   qgcPal.text
+src/VehicleSetup/JoystickConfigCalibration.qml:57:                        color:      qgcPal.window
+src/VehicleSetup/JoystickConfigCalibration.qml:58:                        border.color: qgcPal.text
+src/VehicleSetup/JoystickConfigCalibration.qml:64:                        color:  qgcPal.colorGreen
+src/VehicleSetup/JoystickConfigCalibration.qml:78:                        color:      qgcPal.window
+src/VehicleSetup/JoystickConfigCalibration.qml:79:                        border.color: qgcPal.text
+src/VehicleSetup/JoystickConfigCalibration.qml:85:                        color:  qgcPal.colorGreen
+src/VehicleSetup/SetupView.qml:23:    color:  qgcPal.window
+src/VehicleSetup/SetupView.qml:26:    QGCPalette { id: qgcPal; colorGroupEnabled: true }
+src/VehicleSetup/SetupView.qml:124:            color: qgcPal.windowShade
+src/VehicleSetup/SetupView.qml:142:            color: qgcPal.windowShade
+src/VehicleSetup/SetupView.qml:162:            color: qgcPal.windowShade
+src/VehicleSetup/SetupView.qml:314:        color:                  qgcPal.windowShade
+src/VehicleSetup/JoystickConfigButtons.qml:69:                        border.color:               qgcPal.text
+src/VehicleSetup/JoystickConfigButtons.qml:70:                        color:                      pressed ? qgcPal.buttonHighlight : qgcPal.button
+src/VehicleSetup/JoystickConfigButtons.qml:73:                            color:                  pressed ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/VehicleSetup/JoystickConfigButtons.qml:160:                    border.color:               qgcPal.text
+src/VehicleSetup/JoystickConfigButtons.qml:161:                    color:                      pressed ? qgcPal.buttonHighlight : qgcPal.button
+src/VehicleSetup/JoystickConfigButtons.qml:166:                        color:                  pressed ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/VehicleSetup/JoystickConfigGeneral.qml:149:                border.color:       qgcPal.text
+src/VehicleSetup/JoystickConfigGeneral.qml:225:                border.color:       qgcPal.text
+src/VehicleSetup/JoystickConfigGeneral.qml:249:                            border.color:   qgcPal.text
+src/VehicleSetup/JoystickConfigGeneral.qml:250:                            color:          pressed ? qgcPal.buttonHighlight : qgcPal.windowShade
+src/VehicleSetup/JoystickConfigGeneral.qml:254:                                color:                  pressed ? qgcPal.buttonHighlightText : qgcPal.buttonText
+src/VehicleSetup/VehicleSummary.qml:27:    color:          qgcPal.window
+src/VehicleSetup/VehicleSummary.qml:56:        id:                 qgcPal
+src/VehicleSetup/VehicleSummary.qml:83:                color:			setupComplete ? qgcPal.text : qgcPal.warningText
+src/VehicleSetup/VehicleSummary.qml:105:                        color:      qgcPal.windowShade
+src/VehicleSetup/VehicleSummary.qml:108:                        border.color: qgcPal.text

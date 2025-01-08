@@ -1,27 +1,57 @@
-# QGroundControl Ground Control Station
+### Configuring the Project:
 
-## Custom Build Example
+- Clone the QGroundControl repository found here: `git clone --recursive -j8 https://github.com/mavlink/qgroundcontrol.git`
+- Rename custom-example to custom
+- Navigate to custom/ and run `python3 updateqrc.py`
+- Open Qt Creator
+- Select “File” and then “Open File or Project...”
+- Navigate to the repository
+- Select the file “qgroundcontrol.pro”
+- Select “Configure Project”
+- The project will now be able to build without any modifications
 
-To build this sample custom version:
 
-* Clean you build directory of any previous build
-* Rename the directory from `custom-example` to `custom`
-* Change to the `custom` directory
-* Run `python updateqrc.py`
-* Build QGC
 
-![Custom Build Screenshot](README.jpg)
+### Configuring the Code:
 
-More details on what a custom build is and how to create your own can be found in the [QGC Dev Guide](https://dev.qgroundcontrol.com/en/custom_build/custom_build.html).
+- Use [this](https://github.com/WBawa/QGC_ComponentHiding/tree/simplified_version/custom) for the below section
 
-The main features of this example:
+- Add CustomCorePlugin.h and CustomCorePlugin.cc to custom/src/
+- Add AccessType.h and AccessType.cc to custom/src/
+- Add AccessTypeConfig.h and AccessTypeConfig.cc to custom/src/
+- Create PasscodeMenu directory and add to it PasscodeManager.h/cc
 
-* Assumes an "Off The Shelf" purchased commercial vehicle. This means most vehicle setup is hidden from the user since they should mostly never need to adjust those things. They would be set up correctly by the vehicle producing company prior to sale.
-* The above assumption cause the QGC UI to adjust and not show various things. Providing an even simpler experience to the user.
-* The full experience continues to be available in "Advanced Mode".
-* Brands the build with various custom images and custom color palette which matches corporate branding of the theoretical commercial company this build is for.
-* Customizes portions of the interface such as you can see in the above screenshot which shows a custom instrument widget replacing the standard QGC ui.
-* It also overrides various QGC Application settings to hide some settings the users shouldn't modify as well as adjusting defaults for others.
-* The source code is fully commented to explain what and why it is doing things.
+- Configure the custom.pri file:
 
-> Important Note: This custom build is not automatically built each time regular QGC code changes. This can mean that it may fall out of date with the latest changes in QGC code. This can show up as the `python updateqrc.py` steps failing due to upstream resource changes. Or possibly fail to compile because the plugin mechanism for custom builds has changed. If this happens please notify the QGC devs and they will bring it up to date. Or even better, submit a pull for the fix yourself!
+- Under SOURCES:
+```
+$$PWD/src/AccessType.cpp \
+$$PWD/src/AccessTypeConfig.cpp \
+$$PWD/src/CustomCorePlugin.cc \
+$$PWD/src/PasscodeMenu/PasscodeManager.cc
+```
+ 
+- Under HEADERS:
+```
+$$PWD/src/AccessType.h \
+$$PWD/src/AccessTypeConfig.h \
+$$PWD/src/CustomCorePlugin.h \
+$$PWD/src/PasscodeMenu/PasscodeManager.h
+```
+
+### Configuring the UI:
+    
+- Add the CustomFlightModeMenuIndicator.qml and PasswordSettings.qml to custom/res/Custom/
+
+- Under the `"/qml"` prefix in custom.qrc, add the following lines:
+```
+<file alias="QGroundControl/Controls/FlightModeMenuIndicator.qml">res/Custom/CustomFlightModeMenuIndicator.qml</file>
+<file alias="PasswordSettings.qml">res/Custom/PasswordSettings.qml</file>
+```
+
+- In qgroundcontrol.exclusion, add the following line:
+```
+<file alias="QGroundControl/Controls/FlightModeMenuIndicator.qml">src/ui/toolbar/FlightModeMenuIndicator.qml</file>
+```
+
+After doing this, run `python3 updateqrc.py`
