@@ -1,8 +1,12 @@
 <RCC>
-    <qresource prefix="/qmlimages">
-        <file alias="PaperPlane.svg">res/Images/logo.png</file>
+    <qresource prefix="/res">
+        <file alias="QGCLogoFull">res/Images/logo.png</file>
     </qresource>
-    <!-- <qresource prefix="/qml">
-        <file alias="QGroundControl/FlightDisplay/FlyViewCustomLayer.qml">res/CustomFlyViewOverlay.qml</file>
-    </qresource> -->
+    <qresource prefix="/qml">
+        <!-- <file alias="QGroundControl/FlightDisplay/FlyViewCustomLayer.qml">res/FlyViewCustomLayer.qml</file> -->
+        <file alias="QGroundControl/FlightDisplay/FlyViewVideo.qml">res/FlyViewVideo.qml</file>
+    </qresource>
+    <qresource prefix="/qmlimages">
+        <file alias="rectile.png">res/Images/rectile-transparent.png</file>
+    </qresource>
 </RCC>
