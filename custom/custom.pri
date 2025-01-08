@@ -39,8 +39,20 @@ QGC_APP_DESCRIPTION = "Custom QGroundControl"
 QGC_APP_COPYRIGHT   = "Copyright (C) 2020 QGroundControl Development Team. All rights reserved."
 
 # Our own, custom resources
+DEFINES += CUSTOMHEADER=\"\\\"CustomCorePlugin.h\\\"\"
+DEFINES += CUSTOMCLASS=CustomCorePlugin
+
 RESOURCES += \
     $$PWD/custom.qrc
 
 QML_IMPORT_PATH += \
    $$PWD/res
+
+SOURCES += \
+    $$PWD/src/CustomCorePlugin.cc
+
+HEADERS += \
+    $$PWD/src/CustomCorePlugin.h
+
+INCLUDEPATH += \
+    $$PWD/src
