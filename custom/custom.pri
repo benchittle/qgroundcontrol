@@ -31,7 +31,7 @@ DEFINES += QGC_ORG_NAME=\"\\\"qgroundcontrol.org\\\"\"
 DEFINES += QGC_ORG_DOMAIN=\"\\\"org.qgroundcontrol\\\"\"
 
 QGC_APP_NAME        = "Custom QGroundControl"
-QGC_BINARY_NAME     = "CustomQGroundControl"
+QGC_BINARY_NAME     = "QGroundControl"
 QGC_ORG_NAME        = "Custom"
 QGC_ORG_DOMAIN      = "org.custom"
 QGC_ANDROID_PACKAGE = "org.custom.qgroundcontrol"
