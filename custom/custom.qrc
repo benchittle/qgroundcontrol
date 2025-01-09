@@ -1,3 +1,5 @@
 <RCC>
-    
+    <qresource prefix="/custom">
+        <file alias="CustomAppIcon.png">res/Images/CustomAppIcon.png</file>
+    </qresource>
 </RCC>
