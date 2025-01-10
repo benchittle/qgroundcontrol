@@ -260,8 +260,8 @@ Item {
 
     Image {
         id:                         rectile
-        anchors.top:                parent.top
-        anchors.topMargin:          parent.height / 10
+        anchors.bottom:             parent.bottom
+        anchors.bottomMargin:       parent.height / 2
         anchors.horizontalCenter:   parent.horizontalCenter
         fillMode:                   Image.PreserveAspectFit
         height:                     parent.height / 3
