@@ -17,6 +17,8 @@
 # the project file.
 
 CONFIG -= debug_and_release
+CONFIG -= release                           ##
+CONFIG += debug                             ##
 linux {
     linux-g++ | linux-g++-64 | linux-g++-32 | linux-clang {
         message("Linux build")
@@ -188,6 +190,7 @@ installer {
 CONFIG(debug, debug|release) {
     message(Debug flavor)
     CONFIG += DebugBuild
+    DEFINES += QGC_UNITTEST_BUILD                   ##
 } else:CONFIG(release, debug|release) {
     message(Release flavor)
     CONFIG += ReleaseBuild
